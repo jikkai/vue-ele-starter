@@ -7,7 +7,16 @@ const _ = require('./utils')
 
 module.exports = {
   entry: {
-    client: './src/index.js'
+    client: './src/index.js',
+    vendor: [
+      {{#if mint}}
+      'mint-ui',
+      {{/if}}
+      {{#if element}}
+      'element-ui',
+      {{/if}}
+      'vue'
+    ]
   },
   output: {
     path: _.outputPath,

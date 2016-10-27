@@ -15,6 +15,12 @@
       "type": "string",
       "message": "Author"
     },
+    "port": {
+      "type": "string",
+      "required": false,
+      "message": "Listening ports",
+      "default": "4000"
+    },
     "mint": {
       "type": "confirm",
       "message": "Use Mint-UI?",
@@ -27,5 +33,5 @@
     }
   },
   "filters": {},
-  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install"
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev"
 }
