@@ -5,6 +5,8 @@
 ## Features
 [Vue2](https://github.com/vuejs/vue)
 
+[vue-router](https://github.com/vuejs/vue-router)
+
 [ElementUI](https://github.com/ElemeFE/element)(optional)
 
 [MintUI](https://github.com/ElemeFE/mint-ui)(optional)

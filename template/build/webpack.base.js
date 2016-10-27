@@ -9,13 +9,14 @@ module.exports = {
   entry: {
     client: './src/index.js',
     vendor: [
-      {{#if mint}}
-      'mint-ui',
-      {{/if}}
       {{#if element}}
       'element-ui',
       {{/if}}
-      'vue'
+      {{#if mint}}
+      'mint-ui',
+      {{/if}}
+      'vue',
+      'vue-router'
     ]
   },
   output: {

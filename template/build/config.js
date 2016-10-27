@@ -2,7 +2,7 @@
 const pkg = require('../package')
 
 module.exports = {
-  port: 4000,
+  port: '{{port}}',
   title: '{{name}}',
   vendor: Object.keys(pkg.dependencies),
   babel: {
