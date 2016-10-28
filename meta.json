@@ -21,6 +21,11 @@
       "message": "Listening port",
       "default": "4000"
     },
+    "sass": {
+      "type": "confirm",
+      "message": "Use node-sass?",
+      "default": true
+    },
     "mint": {
       "type": "confirm",
       "message": "Use Mint-UI?",

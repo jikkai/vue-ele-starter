@@ -42,6 +42,6 @@
   }
 </script>
 
-<style scoped>
+<style {{#if sass}}lang="sass"{{/if}} scoped>
 
 </style>
