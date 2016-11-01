@@ -36,7 +36,7 @@
     "node-sass": "^3.10.1",
     {{/if}}
     "postcss-loader": "^0.9.1",
-    "postcss-nested": "^1.0.0",
+    "precss": "^1.4.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     {{#if sass}}
     "sass-loader": "^4.0.2",

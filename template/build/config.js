@@ -24,7 +24,7 @@ module.exports = {
     require('autoprefixer')({
       browsers: ['last 2 versions', 'ie > 8']
     }),
-    require('postcss-nested')
+    require('precss')
   ],
   cssModules: false
 }

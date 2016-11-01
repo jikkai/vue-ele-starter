@@ -10,10 +10,10 @@ const config = require('./config')
 
 
 exec('rm -rf dist/')
-base.devtool = 'source-map'
 
 base.entry.vendor = config.vendor
 base.output.filename = '[name].[chunkhash:8].js'
+base.stats = { children: false }
 base.plugins.push(
   new ProgressBarPlugin(),
   new ExtractTextPlugin('styles.[contenthash:8].css'),
@@ -24,7 +24,6 @@ base.plugins.push(
     minimize: true
   }),
   new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true,
     compress: {
       warnings: false
     },
@@ -41,7 +40,7 @@ base.plugins.push(
 base.module.loaders.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
-    loader: _.cssLoader,
+    loader: 'css-loader?-autoprefixer',
     fallbackLoader: 'style-loader'
   })
 })
