@@ -1,7 +1,6 @@
 'use strict'
 const webpack = require('webpack')
 const base = require('./webpack.base')
-const _ = require('./utils')
 
 base.devtool = 'eval-source-map'
 base.plugins.push(
