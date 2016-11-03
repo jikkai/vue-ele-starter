@@ -3,17 +3,17 @@ const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const base = require('./webpack.base')
-const pkg = require('../package')
-const _ = require('./utils')
-const config = require('./config')
 
+const base = require('./webpack.base')
+const config = require('./config')
 
 exec('rm -rf dist/')
 
 base.entry.vendor = config.vendor
 base.output.filename = '[name].[chunkhash:8].js'
 base.stats = { children: false }
+
+// Plugins Configuration
 base.plugins.push(
   new ProgressBarPlugin(),
   new ExtractTextPlugin('styles.[contenthash:8].css'),
@@ -34,10 +34,25 @@ base.plugins.push(
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     filename: 'vendor.[chunkhash:8].js'
+  }),
+  new webpack.LoaderOptionsPlugin({
+    options: {
+      babel: config.babel,
+      postcss: config.postcss,
+      vue: {
+        loaders: {
+          css: ExtractTextPlugin.extract({
+            loader: 'css-loader?-autoprefixer',
+            fallbackLoader: 'vue-style-loader'
+          })
+        },
+        postcss: config.postcss
+      }
+    }
   })
 )
 
-base.module.loaders.push({
+base.module.rules.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
     loader: 'css-loader?-autoprefixer',
@@ -45,9 +60,5 @@ base.module.loaders.push({
   })
 })
 
-base.vue.loaders.css = ExtractTextPlugin.extract({
-  loader: 'css-loader?-autoprefixer',
-  fallbackLoader: 'vue-style-loader'
-})
 
 module.exports = base

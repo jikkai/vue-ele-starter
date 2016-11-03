@@ -2,27 +2,27 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const config = require('./config')
-const _ = require('./utils')
 
 module.exports = {
   entry: {
     client: './src/index.js'
   },
   output: {
-    path: _.outputPath,
+    path: path.join(__dirname, '../dist/assets'),
     filename: '[name].js',
-    publicPath: './'
+    publicPath: './assets/'
   },
   resolve: {
-    extensions: ['', '.js', '.vue', '.css', '.json'],
+    extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
       root: path.join(__dirname, '../src'),
       components: path.join(__dirname, '../src/components')
     }
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         loaders: ['vue']
@@ -38,24 +38,15 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file',
-        query: {
-          name: 'static/media/[name].[hash:8].[ext]'
-        }
+        loader: 'file?limit=8192'
       }
     ]
-  },
-  babel: config.babel,
-  postcss: config.postcss,
-  vue: {
-    loaders: {},
-    postcss: config.postcss
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: config.title,
       template: __dirname + '/index.html',
-      filename: _.outputIndexPath
+      filename: '../index.html'
     })
   ]
 }
