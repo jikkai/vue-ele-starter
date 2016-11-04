@@ -10,12 +10,11 @@
   "author": "{{author}}",
   "private": true,
   "dependencies": {
-    {{#if element}}
+    {{#isEnabled theme 'element-ui'}}
     "element-ui": "^1.0.0-rc.8",
-    {{/if}}
-    {{#if mint}}
+    {{else}}
     "mint-ui": "^2.0.4",
-    {{/if}}
+    {{/isEnabled}}
     "vue": "^2.0.3",
     "vue-router": "^2.0.1"
   },

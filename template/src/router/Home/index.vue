@@ -1,42 +1,38 @@
 <template>
   <main>
-    {{#if mint}}
-    <mt-button type="primary" @click.native="hello">primary</mt-button>
-    {{/if}}
-    {{#if element}}
+    {{#isEnabled theme 'element-ui'}}
     <el-button type="primary" @click.native="hello">primary</el-button>
-    {{/if}}
+    {{else}}
+    <mt-button type="primary" @click.native="hello">primary</mt-button>
+    {{/isEnabled}}
   </main>
 </template>
 
 <script>
-  {{#if mint}}
-  import { Button, Toast } from 'mint-ui'
-  {{/if}}
-  {{#if element}}
+  {{#isEnabled theme 'element-ui'}}
   import { Button, Message } from 'element-ui'
-  {{/if}}
+  {{else}}
+  import { Button, Toast } from 'mint-ui'
+  {{/isEnabled}}
 
   export default {
     components: {
-      {{#if mint}}
-      MtButton: Button
-      {{/if}}
-      {{#if element}}
+      {{#isEnabled theme 'element-ui'}}
       ElButton: Button
-      {{/if}}
+      {{else}}
+      MtButton: Button
+      {{/isEnabled}}
     },
     methods: {
       hello() {
-        {{#if mint}}
+        {{#isEnabled theme 'element-ui'}}
+        Message('Hello Vue')
+        {{else}}
         Toast({
           message: 'Hello Vue',
           iconClass: 'icon icon-success'
         })
-        {{/if}}
-        {{#if element}}
-        Message('Hello Vue')
-        {{/if}}
+        {{/isEnabled}}
       }
     }
   }

@@ -9,9 +9,7 @@
 
 [node-sass](https://github.com/sass/node-sass)(optional)
 
-[ElementUI](https://github.com/ElemeFE/element)(optional)
-
-[MintUI](https://github.com/ElemeFE/mint-ui)(optional)
+[ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)(optional)
 
 ## Get Started
 

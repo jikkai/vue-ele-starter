@@ -8,12 +8,11 @@ module.exports = {
   babel: {
     babelrc: false,
     plugins: [['component', [
-      {{#if mint}}
-      { libraryName: 'mint-ui', style: true }
-      {{/if}}
-      {{#if element}}
+      {{#isEnabled theme 'element-ui'}}
       { libraryName: 'element-ui', styleLibraryName: 'theme-default' }
-      {{/if}}
+      {{else}}
+      { libraryName: 'mint-ui', style: true }
+      {{/isEnabled}}
     ]]],
     presets: [
       ['es2015', { modules: false }],
