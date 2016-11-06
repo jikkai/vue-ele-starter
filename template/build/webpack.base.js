@@ -23,6 +23,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {{#if eslint}}
+      {
+        enforce: 'pre',
+        test: /.vue$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      },
+      {{/if}}
       {
         test: /\.vue$/,
         loaders: ['vue']

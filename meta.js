@@ -31,6 +31,29 @@ module.exports = {
       required: true,
       message: 'Select which UI framework to install',
       choices: ['element-ui', 'mint-ui']
+    },
+    eslint: {
+      type: 'confirm',
+      require: true,
+      message: 'Use linting with ESLint?',
+      default: true
+    },
+    eslintConfig: {
+      when: 'eslint',
+      type: 'list',
+      message: 'Which eslint config would you like to use?',
+      choices: [
+        {
+          name: 'Standard (https://github.com/feross/standard)',
+          value: 'standard',
+          short: 'Standard'
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'none',
+          short: 'none'
+        }
+      ]
     }
   },
   helpers: {
@@ -41,6 +64,10 @@ module.exports = {
         return opts.inverse(this)
       }
     }
+  },
+  filters: {
+    '.eslintignore': 'eslint',
+    '.eslintrc.js': 'eslint'
   },
   completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
 }

@@ -24,7 +24,7 @@
       {{/isEnabled}}
     },
     methods: {
-      hello() {
+      hello () {
         {{#isEnabled theme 'element-ui'}}
         Message('Hello Vue')
         {{else}}
