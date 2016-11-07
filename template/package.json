@@ -19,7 +19,7 @@
     "vue-router": "^2.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
+    "autoprefixer": "^6.5.2",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-plugin-component": "^0.5.0",
@@ -51,7 +51,7 @@
     "sass-loader": "^4.0.2",
     {{/if}}
     "style-loader": "^0.13.1",
-    "vue-loader": "^9.8.0",
+    "vue-loader": "^9.8.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.1"
