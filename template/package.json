@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     {{#isEnabled theme 'element-ui'}}
-    "element-ui": "^1.0.0-rc.8",
+    "element-ui": "^1.0.0-rc.9",
     {{else}}
     "mint-ui": "^2.0.4",
     {{/isEnabled}}
