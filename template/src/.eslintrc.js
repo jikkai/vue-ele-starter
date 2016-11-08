@@ -13,9 +13,6 @@ module.exports = {
   {{#if_eq eslintConfig 'standard'}}
   extends: 'standard',
   {{/if_eq}}
-  {{#if_eq eslintConfig 'airbnb'}}
-  extends: 'airbnb-base',
-  {{/if_eq}}
   plugins: [
     'html'
   ],
@@ -25,12 +22,6 @@ module.exports = {
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
-    {{/if_eq}}
-    {{#if_eq eslintConfig 'airbnb'}}
-    'global-require': 0,
-    'import/no-unresolved': 0,
-    'no-param-reassign': 0,
-    'no-shadow': 0,
     {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
