@@ -44,6 +44,12 @@ module.exports = {
         test: /\.es6$/,
         loaders: ['babel']
       },
+      {{#if sass}}
+      {
+        test: /\.scss$/,
+        loaders: ['sass']
+      },
+      {{/if}}
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file?limit=8192'
