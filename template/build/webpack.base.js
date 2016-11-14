@@ -27,32 +27,28 @@ module.exports = {
       {
         enforce: 'pre',
         test: /.vue$/,
-        loader: 'eslint',
+        loader: 'eslint-loader',
         exclude: /node_modules/
       },
       {{/if}}
       {
         test: /\.vue$/,
-        loaders: ['vue']
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loaders: ['babel'],
+        loader: 'babel-loader',
         exclude: [/node_modules/]
-      },
-      {
-        test: /\.es6$/,
-        loaders: ['babel']
       },
       {{#if sass}}
       {
         test: /\.scss$/,
-        loaders: ['sass']
+        loader: 'sass-loader'
       },
       {{/if}}
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file?limit=8192'
+        loader: 'file-loader?limit=8192'
       }
     ]
   },

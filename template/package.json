@@ -13,27 +13,27 @@
     {{#isEnabled theme 'element-ui'}}
     "element-ui": "^1.0.0",
     {{else}}
-    "mint-ui": "^2.0.4",
+    "mint-ui": "^2.0.5",
     {{/isEnabled}}
     "vue": "^2.0.5",
     "vue-router": "^2.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.2",
+    "autoprefixer": "^6.5.3",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
-    "babel-plugin-component": "^0.5.1",
+    "babel-plugin-component": "^0.6.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
     "css-loader": "^0.25.0",
     {{#eslint}}
-    "eslint": "^3.9.1",
+    "eslint": "^3.10.0",
     "eslint-friendly-formatter": "^2.0.6",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.6.0",
     {{#if_eq eslintConfig 'standard'}}
     "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-promise": "^3.3.2",
     "eslint-plugin-standard": "^2.0.1",
     {{/if_eq}}
     {{/eslint}}
@@ -44,7 +44,7 @@
     {{#if sass}}
     "node-sass": "^3.11.2",
     {{/if}}
-    "postcss-loader": "^1.1.0",
+    "postcss-loader": "^1.1.1",
     "precss": "^1.4.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     {{#if sass}}
@@ -52,7 +52,7 @@
     {{/if}}
     "style-loader": "^0.13.1",
     "vue-loader": "^9.8.1",
-    "webpack": "^2.1.0-beta.25",
+    "webpack": "^2.1.0-beta.26",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
   }
