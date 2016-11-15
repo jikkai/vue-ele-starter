@@ -19,7 +19,9 @@ base.plugins.push(
       babel: config.babel,
       postcss: config.postcss,
       vue: {
-        loaders: {},
+        loaders: {
+          css: 'style-loader!css-loader!postcss-loader'
+        },
         postcss: config.postcss
       }
     }
