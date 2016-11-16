@@ -21,11 +21,6 @@ module.exports = {
       message: 'Listening port',
       default: '4000'
     },
-    sass: {
-      type: 'confirm',
-      message: 'Use node-sass?',
-      default: true
-    },
     theme: {
       type: 'list',
       required: true,

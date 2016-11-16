@@ -20,9 +20,6 @@ base.plugins.push(
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
   }),
-  new webpack.LoaderOptionsPlugin({
-    minimize: true
-  }),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
@@ -36,13 +33,14 @@ base.plugins.push(
     filename: 'vendor.[chunkhash:8].js'
   }),
   new webpack.LoaderOptionsPlugin({
+    minimize: true,
     options: {
       babel: config.babel,
       postcss: config.postcss,
       vue: {
         loaders: {
           css: ExtractTextPlugin.extract({
-            loader: 'css-loader?-autoprefixer',
+            loader: [{ loader: 'css-loader' }, 'postcss-loader'],
             fallbackLoader: 'vue-style-loader'
           })
         },
@@ -55,10 +53,9 @@ base.plugins.push(
 base.module.rules.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
-    loader: 'css-loader?-autoprefixer',
+    loader: [{ loader: 'css-loader' }, 'postcss-loader'],
     fallbackLoader: 'style-loader'
   })
 })
-
 
 module.exports = base

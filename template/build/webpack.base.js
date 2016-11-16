@@ -40,12 +40,6 @@ module.exports = {
         loader: 'babel-loader',
         exclude: [/node_modules/]
       },
-      {{#if sass}}
-      {
-        test: /\.scss$/,
-        loader: 'sass-loader'
-      },
-      {{/if}}
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file-loader?limit=8192'

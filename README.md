@@ -7,8 +7,6 @@
 
 [vue-router](https://github.com/vuejs/vue-router)
 
-[node-sass](https://github.com/sass/node-sass)(optional)
-
 [ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)(optional)
 
 ## Get Started

@@ -20,10 +20,9 @@ module.exports = {
     ]
   },
   postcss: [
-    require('autoprefixer')({
+    require('postcss-cssnext')({
       browsers: ['last 2 versions', 'ie > 8']
-    }),
-    require('precss')
+    })
   ],
   cssModules: false
 }

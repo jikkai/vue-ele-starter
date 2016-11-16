@@ -37,7 +37,3 @@
     }
   }
 </script>
-
-<style {{#if sass}}lang="sass"{{/if}} scoped>
-
-</style>
