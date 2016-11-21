@@ -50,7 +50,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: config.title,
       template: __dirname + '/index.html',
-      filename: '../index.html'
+      filename: './index.html'
     })
   ]
 }
