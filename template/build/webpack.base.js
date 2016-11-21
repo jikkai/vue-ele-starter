@@ -10,9 +10,9 @@ module.exports = {
     client: './src/index.js'
   },
   output: {
-    path: path.join(__dirname, '../dist/assets'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name].js',
-    publicPath: './assets/'
+    publicPath: './'
   },
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
