@@ -9,7 +9,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'My Superb Vue Project'
+      default: 'My Vue Project'
     },
     author: {
       type: 'string',
