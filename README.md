@@ -3,11 +3,9 @@
 > Quick start with Vue2 and ElementUI/MintUI
 
 ## Features
-[Vue2](https://github.com/vuejs/vue)
-
-[vue-router](https://github.com/vuejs/vue-router)
-
-[ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)(optional)
+* Vue2 + vue-router
+* Vue2 UI Framework - [ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)
+* Unit tests with Karma + Mocha(optional)
 
 ## Get Started
 

@@ -5,6 +5,7 @@
     {{else}}
     <mt-button type="primary" @click.native="hello">primary</mt-button>
     {{/isEnabled}}
+    <hello></hello>
   </main>
 </template>
 
@@ -15,13 +16,16 @@
   import { Button, Toast } from 'mint-ui'
   {{/isEnabled}}
 
+  import Hello from 'components/Hello'
+
   export default {
     components: {
       {{#isEnabled theme 'element-ui'}}
-      ElButton: Button
+      ElButton: Button,
       {{else}}
-      MtButton: Button
+      MtButton: Button,
       {{/isEnabled}}
+      Hello
     },
     methods: {
       hello () {
