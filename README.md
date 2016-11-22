@@ -5,6 +5,7 @@
 ## Features
 * Vue2 + vue-router
 * Vue2 UI Framework - [ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)
+* ESLint - [Standard](https://github.com/feross/standard)(optional)
 * Unit tests with Karma + Mocha(optional)
 
 ## Get Started
