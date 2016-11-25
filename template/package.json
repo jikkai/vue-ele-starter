@@ -12,12 +12,12 @@
   "private": true,
   "dependencies": {
     {{#isEnabled theme 'element-ui'}}
-    "element-ui": "^1.0.2",
+    "element-ui": "latest",
     {{else}}
-    "mint-ui": "^2.0.5",
+    "mint-ui": "latest",
     {{/isEnabled}}
-    "vue": "^2.1.0",
-    "vue-router": "^2.0.3"
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -63,8 +63,8 @@
     "postcss-loader": "^1.1.1",
     "progress-bar-webpack-plugin": "^1.9.0",
     "style-loader": "^0.13.1",
-    "vue-loader": "^10.0.0",
-    "vue-template-compiler": "^2.1.0",
+    "vue-loader": "latest",
+    "vue-template-compiler": "latest",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
