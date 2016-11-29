@@ -57,15 +57,6 @@ module.exports = {
       default: true
     }
   },
-  helpers: {
-    isEnabled (list, check, opts) {
-      if (list[check]) {
-        return opts.fn(this)
-      } else {
-        return opts.inverse(this)
-      }
-    }
-  },
   filters: {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',

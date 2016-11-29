@@ -1,42 +1,42 @@
 <template>
   <main>
-    {{#isEnabled theme 'element-ui'}}
+    {{#if_eq theme 'element-ui'}}
     <el-button type="primary" @click.native="hello">primary</el-button>
     {{else}}
     <mt-button type="primary" @click.native="hello">primary</mt-button>
-    {{/isEnabled}}
+    {{/if_eq}}
     <hello></hello>
   </main>
 </template>
 
 <script>
-  {{#isEnabled theme 'element-ui'}}
+  {{#if_eq theme 'element-ui'}}
   import { Button, Message } from 'element-ui'
   {{else}}
   import { Button, Toast } from 'mint-ui'
-  {{/isEnabled}}
+  {{/if_eq}}
 
   import Hello from 'components/Hello'
 
   export default {
     components: {
-      {{#isEnabled theme 'element-ui'}}
+      {{#if_eq theme 'element-ui'}}
       ElButton: Button,
       {{else}}
       MtButton: Button,
-      {{/isEnabled}}
+      {{/if_eq}}
       Hello
     },
     methods: {
       hello () {
-        {{#isEnabled theme 'element-ui'}}
+        {{#if_eq theme 'element-ui'}}
         Message('Hello Vue')
         {{else}}
         Toast({
           message: 'Hello Vue',
           iconClass: 'icon icon-success'
         })
-        {{/isEnabled}}
+        {{/if_eq}}
       }
     }
   }

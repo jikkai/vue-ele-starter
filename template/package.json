@@ -11,11 +11,11 @@
   "author": "{{author}}",
   "private": true,
   "dependencies": {
-    {{#isEnabled theme 'element-ui'}}
+    {{#if_eq theme 'element-ui'}}
     "element-ui": "latest",
     {{else}}
     "mint-ui": "latest",
-    {{/isEnabled}}
+    {{/if_eq}}
     "vue": "latest",
     "vue-router": "latest"
   },
@@ -27,7 +27,7 @@
     "babel-preset-stage-1": "^6.16.0",
     "css-loader": "^0.26.0",
     {{#eslint}}
-    "eslint": "^3.10.2",
+    "eslint": "^3.11.1",
     "eslint-friendly-formatter": "^2.0.6",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
@@ -59,7 +59,7 @@
     "isparta-loader": "^2.0.0",
     "phantomjs-prebuilt": "^2.1.3",
     {{/unit}}
-    "postcss-cssnext": "^2.8.0",
+    "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^1.1.1",
     "progress-bar-webpack-plugin": "^1.9.0",
     "style-loader": "^0.13.1",

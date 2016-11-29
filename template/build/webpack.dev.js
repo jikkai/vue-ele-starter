@@ -16,7 +16,6 @@ base.plugins.push(
   new webpack.NoErrorsPlugin(),
   new webpack.LoaderOptionsPlugin({
     options: {
-      babel: config.babel,
       postcss: config.postcss,
       vue: {
         loaders: {

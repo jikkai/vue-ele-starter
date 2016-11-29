@@ -35,7 +35,6 @@ base.plugins.push(
   new webpack.LoaderOptionsPlugin({
     minimize: true,
     options: {
-      babel: config.babel,
       postcss: config.postcss,
       vue: {
         loaders: {

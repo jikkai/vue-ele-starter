@@ -4,21 +4,15 @@ const pkg = require('../package')
 module.exports = {
   port: '{{port}}',
   title: '{{name}}',
-  vendor: Object.keys(pkg.dependencies),
-  babel: {
-    babelrc: false,
-    plugins: [['component', [
-      {{#isEnabled theme 'element-ui'}}
-      { libraryName: 'element-ui', styleLibraryName: 'theme-default' }
-      {{else}}
-      { libraryName: 'mint-ui', style: true }
-      {{/isEnabled}}
-    ]]],
-    presets: [
-      ['es2015', { modules: false }],
-      'stage-1'
-    ]
-  },
+  vendor: [
+    {{#if_eq theme 'element-ui'}}
+    'element-ui',
+    {{else}}
+    'mint-ui',
+    {{/if_eq}}
+    'vue',
+    'vue-router'
+  ],
   postcss: [
     require('postcss-cssnext')({
       browsers: ['last 2 versions', 'ie > 8']
