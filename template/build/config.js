@@ -5,11 +5,6 @@ module.exports = {
   port: '{{port}}',
   title: '{{name}}',
   vendor: [
-    {{#if_eq theme 'element-ui'}}
-    'element-ui',
-    {{else}}
-    'mint-ui',
-    {{/if_eq}}
     'vue',
     'vue-router'
   ],
