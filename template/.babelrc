@@ -1,5 +1,4 @@
 {
-  "babelrc": false,
   "plugins": [["component", [
     {{#if_eq theme 'element-ui'}}
     { "libraryName": "element-ui", "styleLibraryName": "theme-default" }
