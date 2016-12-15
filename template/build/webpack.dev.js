@@ -6,6 +6,7 @@ const config = require('./config')
 
 base.devtool = 'eval-source-map'
 base.output.publicPath = '/assets/'
+base.performance.hints = false
 
 // Plugins Configuration
 base.plugins.push(

@@ -1,6 +1,5 @@
 'use strict'
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = require('./config')
@@ -21,6 +20,7 @@ module.exports = {
       components: path.join(__dirname, '../src/components')
     }
   },
+  performance: {},
   module: {
     rules: [
       {{#if eslint}}
