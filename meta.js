@@ -55,12 +55,12 @@ module.exports = {
       message: 'Setup unit tests with Karma + Mocha?',
       default: true
     },
-    unit: {
-      type: 'shell',
+    shell: {
+      type: 'confirm',
       require: true,
       message: 'Need build script?',
       default: true
-    },
+    }
   },
   filters: {
     '.eslintignore': 'eslint',
