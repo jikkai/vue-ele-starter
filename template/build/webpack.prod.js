@@ -1,4 +1,5 @@
 'use strict'
+
 const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')

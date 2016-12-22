@@ -8,8 +8,7 @@ module.exports = {
     description: {
       type: 'string',
       required: false,
-      message: 'Project description',
-      default: 'My Vue Project'
+      message: 'Project description'
     },
     author: {
       type: 'string',
@@ -55,12 +54,19 @@ module.exports = {
       require: true,
       message: 'Setup unit tests with Karma + Mocha?',
       default: true
-    }
+    },
+    unit: {
+      type: 'shell',
+      require: true,
+      message: 'Need build script?',
+      default: true
+    },
   },
   filters: {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
-    'test/**/*': 'unit'
+    'test/**/*': 'unit',
+    'build.sh': 'shell'
   },
   completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
 }

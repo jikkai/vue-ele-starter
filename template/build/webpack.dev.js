@@ -1,4 +1,5 @@
 'use strict'
+
 const webpack = require('webpack')
 
 const base = require('./webpack.base')
