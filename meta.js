@@ -20,6 +20,12 @@ module.exports = {
       message: 'Listening port',
       default: '4000'
     },
+    routerMode: {
+      type: 'list',
+      required: true,
+      message: 'Select router mode',
+      choices: ['history', 'hash']
+    },
     theme: {
       type: 'list',
       required: true,
