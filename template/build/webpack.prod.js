@@ -1,14 +1,11 @@
 'use strict'
 
-const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const base = require('./webpack.base')
 const config = require('./config')
-
-exec('rm -rf dist/')
 
 base.entry.vendor = config.vendor
 base.output.filename = '[name].[chunkhash:8].js'

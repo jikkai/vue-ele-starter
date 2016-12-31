@@ -6,8 +6,6 @@
     { "libraryName": "mint-ui", "style": true }
     {{/if_eq}}
   ]]],
-  "presets": [
-    ["es2015", { "modules": false }],
-    "stage-1"
-  ]
+  "presets": ["es2015", "stage-0"]
+
 }
