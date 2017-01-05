@@ -64,7 +64,7 @@ module.exports = {
     shell: {
       type: 'confirm',
       require: true,
-      message: 'Need build script?',
+      message: 'Need publish script?',
       default: true
     }
   },
@@ -72,7 +72,7 @@ module.exports = {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
     'test/**/*': 'unit',
-    'build.sh': 'shell'
+    'publish.sh': 'shell'
   },
   completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
 }
