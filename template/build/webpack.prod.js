@@ -37,8 +37,8 @@ base.plugins.push(
       vue: {
         loaders: {
           css: ExtractTextPlugin.extract({
-            loader: [{ loader: 'css-loader' }, 'postcss-loader'],
-            fallbackLoader: 'vue-style-loader'
+            use: [{ loader: 'css-loader' }, 'postcss-loader'],
+            fallback: 'vue-style-loader'
           })
         },
         postcss: config.postcss
@@ -50,8 +50,8 @@ base.plugins.push(
 base.module.rules.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
-    loader: [{ loader: 'css-loader' }, 'postcss-loader'],
-    fallbackLoader: 'style-loader'
+    use: [{ loader: 'css-loader' }, 'postcss-loader'],
+    fallback: 'style-loader'
   })
 })
 

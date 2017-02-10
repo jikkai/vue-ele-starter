@@ -8,8 +8,13 @@ module.exports = {
     'vue-router'
   ],
   postcss: [
-    require('postcss-cssnext')({
-      browsers: ['last 2 versions', 'ie > 8']
+    require('postcss-salad')({
+      features: {
+        bem: {
+          shortcuts: { component: 'c', modifier: 'm', descendent: 'd' },
+          separators: { modifier: '--', descendent: '__' }
+        }
+      }
     })
   ],
   cssModules: false
