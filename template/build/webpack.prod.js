@@ -41,6 +41,7 @@ base.plugins.push(
             fallback: 'vue-style-loader'
           })
         },
+        preserveWhitespace: false,
         postcss: config.postcss
       }
     }
