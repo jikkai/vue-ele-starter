@@ -1,0 +1,5 @@
+{{#if_eq theme 'element-ui'}}
+@reset-global pc;
+{{else}}
+@reset-global mobile;
+{{/if_eq}}
