@@ -3,7 +3,6 @@
 const webpack = require('webpack')
 
 const base = require('./webpack.base')
-const config = require('./config')
 
 base.devtool = 'eval-source-map'
 base.output.publicPath = '/assets/'
@@ -18,12 +17,10 @@ base.plugins.push(
   new webpack.NoEmitOnErrorsPlugin(),
   new webpack.LoaderOptionsPlugin({
     options: {
-      postcss: config.postcss,
       vue: {
         loaders: {
           css: 'style-loader!css-loader!postcss-loader'
-        },
-        postcss: config.postcss
+        }
       }
     }
   })

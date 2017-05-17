@@ -33,7 +33,6 @@ base.plugins.push(
   new webpack.LoaderOptionsPlugin({
     minimize: true,
     options: {
-      postcss: config.postcss,
       vue: {
         loaders: {
           css: ExtractTextPlugin.extract({
@@ -41,8 +40,7 @@ base.plugins.push(
             fallback: 'vue-style-loader'
           })
         },
-        preserveWhitespace: false,
-        postcss: config.postcss
+        preserveWhitespace: false
       }
     }
   })
