@@ -29,22 +29,18 @@ base.plugins.push(
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     filename: 'vendor.[chunkhash:8].js'
-  }),
-  new webpack.LoaderOptionsPlugin({
-    minimize: true,
-    options: {
-      vue: {
-        loaders: {
-          css: ExtractTextPlugin.extract({
-            use: [{ loader: 'css-loader' }, 'postcss-loader'],
-            fallback: 'vue-style-loader'
-          })
-        },
-        preserveWhitespace: false
-      }
-    }
   })
 )
+
+// Rules Configuration
+base.module.rules.push({
+  test: /\.vue$/,
+  loader: 'vue-loader',
+  options: {
+    extractCSS: true,
+    preserveWhitespace: false
+  }
+})
 
 base.module.rules.push({
   test: /\.css$/,

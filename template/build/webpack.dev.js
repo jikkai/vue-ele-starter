@@ -14,21 +14,22 @@ base.plugins.push(
     'process.env.NODE_ENV': JSON.stringify('development')
   }),
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoEmitOnErrorsPlugin(),
-  new webpack.LoaderOptionsPlugin({
-    options: {
-      vue: {
-        loaders: {
-          css: 'style-loader!css-loader!postcss-loader'
-        }
-      }
-    }
-  })
+  new webpack.NoEmitOnErrorsPlugin()
 )
+
+// Rules Configuration
+base.module.rules.push({
+  test: /\.vue$/,
+  use: 'vue-loader'
+})
 
 base.module.rules.push({
   test: /\.css$/,
-  loader: 'style-loader!css-loader!postcss-loader'
+  use: [
+    'style-loader',
+    { loader: 'css-loader', options: { importLoaders: 1 } },
+    'postcss-loader'
+  ]
 })
 
 module.exports = base
