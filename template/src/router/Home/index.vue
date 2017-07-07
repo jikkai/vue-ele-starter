@@ -10,29 +10,18 @@
 </template>
 
 <script>
-  {{#if_eq theme 'element-ui'}}
-  import { Button, Message } from 'element-ui'
-  {{else}}
-  import { Button, Toast } from 'mint-ui'
-  {{/if_eq}}
-
   import Hello from 'components/Hello'
 
   export default {
     components: {
-      {{#if_eq theme 'element-ui'}}
-      ElButton: Button,
-      {{else}}
-      MtButton: Button,
-      {{/if_eq}}
       Hello
     },
     methods: {
       hello () {
         {{#if_eq theme 'element-ui'}}
-        Message('Hello Vue')
+        this.$message('Hello Vue')
         {{else}}
-        Toast({
+        this.$toast({
           message: 'Hello Vue',
           iconClass: 'icon icon-success'
         })
