@@ -12,7 +12,7 @@ const UIComponents = [
   Button
 ]
 for (let i = 0, len = UIComponents.length; i < len; i++) {
-  Vue.use(UIComponents[i])
+  Vue.component(UIComponents[i].name, UIComponents[i])
 }
 {{#if_eq theme 'element-ui'}}
 Vue.prototype.$message = Message
