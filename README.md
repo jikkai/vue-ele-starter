@@ -1,5 +1,7 @@
 # vue-ele-starter
 
+[!Build Status](https://travis-ci.org/jikkai/vue-ele-starter)
+
 > Quick start with Vue2 and ElementUI/MintUI
 
 ## Features

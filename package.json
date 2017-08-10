@@ -1,0 +1,11 @@
+{
+  "name": "vue-ele-start",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "Quick start with Vue2 and ElementUI/MintUI.",
+  "author": "Jikkai Xiao <sonne@asaki.me>",
+  "scripts": {},
+  "devDependencies": {
+    "vue-cli": "^2.8.2"
+  }
+}
