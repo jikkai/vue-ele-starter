@@ -3,4 +3,4 @@ node_js:
   - "7"
   - "8"
 script: 
-  - test.sh
+  - bash test.sh
