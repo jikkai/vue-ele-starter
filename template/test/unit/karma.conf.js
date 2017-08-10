@@ -1,8 +1,14 @@
 var webpackConfig = require('../../build/webpack.test')
 
-module.exports = function(config) {
+const configuration = function(config) {
   config.set({
     browsers: ['Chrome'],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     frameworks: ['mocha', 'expect'],
     reporters: ['spec', 'coverage'],
     coverageReporter: {
@@ -28,3 +34,9 @@ module.exports = function(config) {
     concurrency: Infinity
   })
 }
+
+if(process.env.TRAVIS){
+  configuration.browsers = ['Chrome_travis_ci']
+}
+
+module.exports = configuration
