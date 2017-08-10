@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   port: '{{port}}',
   title: '{{name}}',

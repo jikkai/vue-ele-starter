@@ -12,12 +12,6 @@ To develop:
 $ npm run dev
 ```
 
-{{#unit}}To test:
-
-```bash
-$ npm run unit
-```{{/unit}}
-
 To build for production:
 
 ```bash
