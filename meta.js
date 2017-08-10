@@ -55,6 +55,10 @@ module.exports = {
         }
       ]
     },
+    unit: {
+      type: 'confirm',
+      message: 'Setup unit tests with Karma + Mocha?'
+    },
     shell: {
       type: 'confirm',
       require: true,
@@ -65,6 +69,8 @@ module.exports = {
   filters: {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
+    'test/unit/**/*': 'unit',
+    'build/webpack.test.conf.js': 'unit',
     'publish.sh': 'shell'
   },
   completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
