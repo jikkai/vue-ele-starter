@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+{{#happypack}}
+const HappyPack = require('happypack'){{/happypack}}
 
 const config = require('./config')
 
@@ -15,7 +17,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
-      '~root': path.join(__dirname, '../src'),
+      '~': path.join(__dirname, '../src'),
       '~components': path.join(__dirname, '../src/components')
     }
   },
@@ -32,7 +34,11 @@ module.exports = {
       {{/if}}
       {
         test: /\.js$/,
+        {{#if happypack}}
+        use: 'happypack/loader?id=babel',
+        {{else}}
         use: 'babel-loader',
+        {{/if}}
         exclude: [/node_modules/]
       },
       {
@@ -46,6 +52,11 @@ module.exports = {
       title: config.title,
       template: __dirname + '/index.html',
       filename: './index.html'
-    })
+    }){{#happypack}},
+    new HappyPack({
+      id: 'babel',
+      loaders: ['babel-loader'],
+      threads: 4
+    }){{/happypack}}
   ]
 }

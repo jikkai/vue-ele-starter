@@ -35,6 +35,11 @@ base.module.rules.push({
   test: /\.vue$/,
   loader: 'vue-loader',
   options: {
+    {{#happypack}}
+    loaders: {
+      js: 'happypack/loader?id=babel'
+    },
+    {{/happypack}}
     extractCSS: true,
     preserveWhitespace: false
   }

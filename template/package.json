@@ -39,6 +39,9 @@
     "eslint-plugin-standard": "^3.0.1",
     {{/if_eq}}
     {{/eslint}}
+    {{#happypack}}
+    "happypack": "^4.0.0-beta.2",
+    {{/happypack}}
     "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",

@@ -9,6 +9,7 @@
 * Vue2 UI Framework - [ElementUI](https://github.com/ElemeFE/element) / [MintUI](https://github.com/ElemeFE/mint-ui)
 * Postcss with postcss-salad
 * ESLint - [Standard](https://github.com/feross/standard)(optional)
+* 🆕 [Happypack](https://github.com/amireh/happypack)
 * Unit tests with Karma + Mocha(optional)
 * Publish script(optional)
 

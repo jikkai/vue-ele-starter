@@ -55,6 +55,10 @@ module.exports = {
         }
       ]
     },
+    happypack: {
+      type: 'confirm',
+      message: '[⚠️Experimental]Trying to use happypack with babel-loader?'
+    },
     unit: {
       type: 'confirm',
       message: 'Setup unit tests with Karma + Mocha?'
