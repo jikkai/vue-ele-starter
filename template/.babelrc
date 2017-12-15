@@ -1,10 +1,13 @@
 {
-  "plugins": [["component", [
-    {{#if_eq theme 'element-ui'}}
-    { "libraryName": "element-ui", "styleLibraryName": "theme-chalk" }
-    {{else}}
-    { "libraryName": "mint-ui", "style": true }
-    {{/if_eq}}
-  ]]],
-  "presets": ["es2015", "stage-0"]
+  "plugins": [
+    ["component", [
+      {{#if_eq theme 'element-ui'}}
+      { "libraryName": "element-ui", "styleLibraryName": "theme-chalk" }
+      {{else}}
+      { "libraryName": "mint-ui", "style": true }
+      {{/if_eq}}
+    ]],
+    "transform-object-rest-spread"
+  ],
+  "presets": ["env"]
 }
