@@ -25,14 +25,14 @@
     "babel-plugin-component": "latest",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "css-loader": "^0.28.7",
+    "css-loader": "^0.28.9",
     {{#eslint}}
-    "eslint": "^4.13.1",
+    "eslint": "^4.17.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-node": "^6.0.0",
     {{#if_eq eslintConfig 'standard'}}
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-promise": "^3.6.0",
@@ -40,14 +40,14 @@
     {{/if_eq}}
     {{/eslint}}
     {{#happypack}}
-    "happypack": "^4.0.0",
+    "happypack": "^4.0.1",
     {{/happypack}}
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     {{#unit}}
-    "karma": "^1.7.1",
+    "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-expect": "^1.1.3",
@@ -55,18 +55,18 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^2.0.9",
-    "mocha": "^4.0.1",
+    "mocha": "^5.0.0",
     {{/unit}}
-    "nodemon": "^1.12.7",
-    "postcss-loader": "^2.0.9",
+    "nodemon": "^1.14.12",
+    "postcss-loader": "^2.1.0",
     "postcss-salad": "^2.0.1",
     "progress-bar-webpack-plugin": "^1.10.0",
     "rimraf": "^2.6.2",
-    "style-loader": "^0.19.1",
+    "style-loader": "^0.20.1",
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
-    "webpack": "^3.10.0",
-    "webpack-dev-middleware": "^2.0.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.5",
     "webpack-hot-middleware": "^2.21.0"
   }
 }
