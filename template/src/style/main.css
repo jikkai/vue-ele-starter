@@ -1,5 +1,5 @@
-{{#if_eq theme 'element-ui'}}
-@reset-global pc;
-{{else}}
+{{#if_eq theme 'mint-ui'}}
 @reset-global mobile;
+{{else}}
+@reset-global pc;
 {{/if_eq}}

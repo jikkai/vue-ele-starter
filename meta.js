@@ -30,7 +30,23 @@ module.exports = {
       type: 'list',
       required: true,
       message: 'Select which UI framework to install',
-      choices: ['element-ui', 'mint-ui']
+      choices: [
+        {
+          name: 'Element UI (https://github.com/ElemeFE/element)',
+          value: 'element-ui',
+          short: 'ElementUI'
+        },
+        {
+          name: 'Mint UI (https://github.com/ElemeFE/mint-ui)',
+          value: 'mint-ui',
+          short: 'MintUI'
+        },
+        {
+          name: 'none',
+          value: 'none',
+          short: 'none'
+        }
+      ]
     },
     eslint: {
       type: 'confirm',

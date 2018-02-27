@@ -1,12 +1,13 @@
 {
-  "plugins": [
+  "plugins": [{{#unless_eq theme 'none'}}
     ["component", [
       {{#if_eq theme 'element-ui'}}
       { "libraryName": "element-ui", "styleLibraryName": "theme-chalk" }
-      {{else}}
+      {{/if_eq}}
+      {{#if_eq theme 'mint-ui'}}
       { "libraryName": "mint-ui", "style": true }
       {{/if_eq}}
-    ]],
+    ]],{{/unless_eq}}
     "transform-object-rest-spread"
   ],
   "presets": ["env"]

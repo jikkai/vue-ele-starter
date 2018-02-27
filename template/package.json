@@ -13,7 +13,8 @@
   "dependencies": {
     {{#if_eq theme 'element-ui'}}
     "element-ui": "latest",
-    {{else}}
+    {{/if_eq}}
+    {{#if_eq theme 'mint-ui'}}
     "mint-ui": "latest",
     {{/if_eq}}
     "vue": "latest",
@@ -22,7 +23,9 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    {{#unless_eq theme 'none'}}
     "babel-plugin-component": "latest",
+    {{/unless_eq}}
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "chalk": "^2.1.0",
