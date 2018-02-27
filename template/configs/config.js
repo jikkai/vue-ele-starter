@@ -4,6 +4,5 @@ module.exports = {
   vendor: [
     'vue',
     'vue-router'
-  ],
-  cssModules: false
+  ]
 }
