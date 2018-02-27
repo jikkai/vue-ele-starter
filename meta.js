@@ -57,25 +57,18 @@ module.exports = {
     },
     happypack: {
       type: 'confirm',
-      message: '[⚠️ Experimental]Trying to use happypack with babel-loader?'
+      message: 'Trying to use happypack with babel-loader?'
     },
     unit: {
       type: 'confirm',
       message: 'Setup unit tests with Karma + Mocha?'
-    },
-    shell: {
-      type: 'confirm',
-      require: true,
-      message: 'Need publish script?',
-      default: true
     }
   },
   filters: {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
     'test/unit/**/*': 'unit',
-    'build/webpack.test.js': 'unit',
-    'publish.sh': 'shell'
+    'config/webpack.test.js': 'unit'
   },
-  completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
+  completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm start'
 }

@@ -1,7 +1,12 @@
 {
   "ignore": [
-    ".git",
+    ".gitignore",
+    "README.md",
+    ".git/**",
     "src/**",
-    "dist/**"
+    "test/**",
+    "dist/**",
+    "node_modules/**",
+    "public/**"
   ]
 }

@@ -1,4 +1,4 @@
-var webpackConfig = require('../../build/webpack.test')
+var webpackConfig = require('../../configs/webpack.test')
 
 const configuration = function(config) {
   config.set({
