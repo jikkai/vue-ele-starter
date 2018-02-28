@@ -10,5 +10,15 @@
     ]],{{/unless_eq}}
     "transform-object-rest-spread"
   ],
-  "presets": ["env"]
+  "presets": [
+    [ "env", {
+      "targets": {
+        "browsers": [
+          "> 1%",
+          "last 2 versions",
+          "not ie <= 8"
+        ]
+      }
+    }]
+  ],
 }

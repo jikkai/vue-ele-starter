@@ -22,23 +22,24 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.3",
     {{#unless_eq theme 'none'}}
     "babel-plugin-component": "latest",
     {{/unless_eq}}
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.6.0",
     "chalk": "^2.1.0",
     "css-loader": "^0.28.9",
+    "cssnano": "^3.10.0",
     {{#eslint}}
-    "eslint": "^4.17.0",
+    "eslint": "^4.18.1",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.9.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
     {{#if_eq eslintConfig 'standard'}}
-    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard": "^11.0.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     {{/if_eq}}
@@ -48,7 +49,7 @@
     {{/happypack}}
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
+    "file-loader": "^1.1.10",
     "html-webpack-plugin": "^2.30.1",
     {{#unit}}
     "karma": "^2.0.0",
@@ -61,7 +62,7 @@
     "karma-webpack": "^2.0.9",
     "mocha": "^5.0.0",
     {{/unit}}
-    "nodemon": "^1.14.12",
+    "nodemon": "^1.15.1",
     "postcss-loader": "^2.1.0",
     "postcss-salad": "^2.0.1",
     "progress-bar-webpack-plugin": "^1.10.0",
@@ -70,7 +71,7 @@
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
     "webpack": "^3.11.0",
-    "webpack-dev-middleware": "^2.0.5",
+    "webpack-dev-middleware": "^2.0.6",
     "webpack-hot-middleware": "^2.21.0"
   }
 }
