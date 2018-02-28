@@ -50,7 +50,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: config.title,
-      template: path.resolve(__dirname, '../public/index.html'),
+      template: path.resolve(__dirname, './index.html'),
+      favicon: path.resolve(__dirname, '../public/favicon.png'),
       filename: './index.html'
     }){{#happypack}},
     new HappyPack({
