@@ -84,7 +84,7 @@ module.exports = {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
     'test/unit/**/*': 'unit',
-    'config/webpack.test.js': 'unit'
+    'configs/webpack.test.js': 'unit'
   },
   completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm start'
 }
