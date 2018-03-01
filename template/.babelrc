@@ -8,6 +8,10 @@
       { "libraryName": "mint-ui", "style": true }
       {{/if_eq}}
     ]],{{/unless_eq}}
+    {{#vcc}}
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    {{/vcc}}
     "transform-object-rest-spread"
   ],
   "presets": [

@@ -16,6 +16,9 @@ module.exports = {
   plugins: [
     'html'
   ],
+  {{#vcc}}
+  "parser": "babel-eslint",
+  {{/vcc}}
   'rules': {
     {{#if_eq eslintConfig 'standard'}}
     'arrow-parens': 0,

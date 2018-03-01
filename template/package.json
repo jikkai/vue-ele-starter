@@ -22,10 +22,17 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    {{#vcc}}
+    "babel-eslint": "^8.2.2",
+    {{/vcc}}
     "babel-loader": "^7.1.3",
     {{#unless_eq theme 'none'}}
     "babel-plugin-component": "latest",
     {{/unless_eq}}
+    {{#vcc}}
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    {{/vcc}}
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "chalk": "^2.1.0",
@@ -50,7 +57,7 @@
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.10",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^3.0.3",
     {{#unit}}
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -59,15 +66,18 @@
     "karma-mocha": "^1.3.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",
-    "karma-webpack": "^2.0.9",
-    "mocha": "^5.0.0",
+    "karma-webpack": "^2.0.13",
+    "mocha": "^5.0.1",
     {{/unit}}
     "nodemon": "^1.15.1",
-    "postcss-loader": "^2.1.0",
+    "postcss-loader": "^2.1.1",
     "postcss-salad": "^2.0.1",
-    "progress-bar-webpack-plugin": "^1.10.0",
+    "progress-bar-webpack-plugin": "^1.11.0",
     "rimraf": "^2.6.2",
     "style-loader": "^0.20.1",
+    {{#vcc}}
+    "vue-class-component": "^6.2.0",
+    {{/vcc}}
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
     "webpack": "^3.11.0",

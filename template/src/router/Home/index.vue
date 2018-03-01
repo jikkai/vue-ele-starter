@@ -10,6 +10,32 @@
   </main>
 </template>
 
+{{#if vcc}}
+<script>
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+  import Hello from '~components/Hello'
+
+  @Component({
+    components: {
+      Hello
+    }
+  })
+  export default class HomeRoute extends Vue {
+    hello () {
+      {{#if_eq theme 'element-ui'}}
+      this.$message('Hello Vue')
+      {{/if_eq}}
+      {{#if_eq theme 'mint-ui'}}
+      this.$toast({
+        message: 'Hello Vue',
+        iconClass: 'icon icon-success'
+      })
+      {{/if_eq}}
+    }
+  }
+</script>
+{{else}}
 <script>
   import Hello from '~components/Hello'
 
@@ -32,3 +58,4 @@
     }
   }
 </script>
+{{/if}}

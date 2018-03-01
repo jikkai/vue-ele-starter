@@ -75,6 +75,10 @@ module.exports = {
       type: 'confirm',
       message: 'Trying to use happypack with babel-loader?'
     },
+    vcc: {
+      type: 'confirm',
+      message: 'Trying to use vue-class-component?'
+    },
     unit: {
       type: 'confirm',
       message: 'Setup unit tests with Karma + Mocha?'
