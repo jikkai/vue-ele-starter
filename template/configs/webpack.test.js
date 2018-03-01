@@ -12,16 +12,7 @@ base.plugins.push(
 // Rules Configuration
 base.module.rules.push({
   test: /\.vue$/,
-  {{#if happypack}}
-  loader: 'vue-loader',
-  options: {
-    loaders: {
-      js: 'happypack/loader?id=babel'
-    }
-  }
-  {{else}}
   use: 'vue-loader'
-  {{/if}}
 })
 
 base.module.rules.push({

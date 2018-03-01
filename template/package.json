@@ -51,11 +51,8 @@
     "eslint-plugin-standard": "^3.0.1",
     {{/if_eq}}
     {{/eslint}}
-    {{#happypack}}
-    "happypack": "^4.0.1",
-    {{/happypack}}
     "express": "^4.16.2",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.10",
     "html-webpack-plugin": "^3.0.3",
     {{#unit}}
@@ -80,8 +77,8 @@
     {{/vcc}}
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
-    "webpack": "^3.11.0",
-    "webpack-dev-middleware": "^2.0.6",
+    "webpack": "^4.0.1",
+    "webpack-dev-middleware": "^3.0.0",
     "webpack-hot-middleware": "^2.21.0"
   }
 }

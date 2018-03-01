@@ -71,10 +71,6 @@ module.exports = {
         }
       ]
     },
-    happypack: {
-      type: 'confirm',
-      message: 'Trying to use happypack with babel-loader?'
-    },
     vcc: {
       type: 'confirm',
       message: 'Trying to use vue-class-component?'

@@ -1,7 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-{{#happypack}}
-const HappyPack = require('happypack'){{/happypack}}
 
 const config = require('./config')
 
@@ -34,11 +32,7 @@ module.exports = {
       {{/if}}
       {
         test: /\.js$/,
-        {{#if happypack}}
-        use: 'happypack/loader?id=babel',
-        {{else}}
         use: 'babel-loader',
-        {{/if}}
         exclude: [/node_modules/]
       },
       {
@@ -53,11 +47,6 @@ module.exports = {
       template: path.resolve(__dirname, './index.html'),
       favicon: path.resolve(__dirname, '../public/favicon.png'),
       filename: './index.html'
-    }){{#happypack}},
-    new HappyPack({
-      id: 'babel',
-      loaders: ['babel-loader'],
-      threads: 4
-    }){{/happypack}}
+    })
   ]
 }
