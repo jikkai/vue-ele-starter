@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import Vue from 'vue'
 {{#if_eq theme 'element-ui'}}
 import { Button, Message } from 'element-ui'

@@ -11,6 +11,7 @@
   },
   "author": "{{author}}",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     {{#if_eq theme 'element-ui'}}
     "element-ui": "latest",
     {{/if_eq}}
@@ -73,7 +74,7 @@
     "rimraf": "^2.6.2",
     "style-loader": "^0.20.1",
     {{#vcc}}
-    "vue-class-component": "^6.2.0",
+    "vue-class-component": "latest",
     {{/vcc}}
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
