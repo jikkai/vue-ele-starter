@@ -11,6 +11,7 @@
 * ESLint - [Standard](https://github.com/feross/standard)(optional)
 * 🆕 [vue-class-component](https://github.com/vuejs/vue-class-component)
 * Unit tests with Karma + Mocha(optional)
+* router-based code splitting
 
 ## Get Started
 

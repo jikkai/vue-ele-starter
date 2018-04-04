@@ -4,20 +4,19 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const base = require('./webpack.base')
 
-base.mode = 'production'
 base.output.filename = '[name].[chunkhash:8].js'
 base.stats = { children: false }
 base.optimization = {
-  minimize: true,
-  splitChunks: {
-    chunks: 'all'
-  }
+  runtimeChunk: true
 }
 
 // Plugins Configuration
 base.plugins.push(
   new ProgressBarPlugin(),
-  new ExtractTextPlugin('styles.[contenthash:8].css')
+  new ExtractTextPlugin({
+    allChunks: true,
+    filename: 'styles.[chunkhash:8].css'
+  })
 )
 
 // Rules Configuration
