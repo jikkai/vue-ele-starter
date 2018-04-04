@@ -9,7 +9,7 @@ $ npm install
 To develop:
 
 ```bash
-$ npm run dev
+$ npm start
 ```
 
 To build for production:
