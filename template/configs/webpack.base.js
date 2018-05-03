@@ -45,12 +45,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: config.title,
-<<<<<<< HEAD:template/build/webpack.base.js
-      template: path.join(__dirname, '/index.html'),
-=======
       template: path.resolve(__dirname, './index.html'),
       favicon: path.resolve(__dirname, '../public/favicon.png'),
->>>>>>> upstream/master:template/configs/webpack.base.js
       filename: './index.html'
     }),
     new VueLoaderPlugin()
