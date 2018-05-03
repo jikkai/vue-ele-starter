@@ -30,7 +30,23 @@ module.exports = {
       type: 'list',
       required: true,
       message: 'Select which UI framework to install',
-      choices: ['element-ui', 'mint-ui']
+      choices: [
+        {
+          name: 'Element UI (https://github.com/ElemeFE/element)',
+          value: 'element-ui',
+          short: 'ElementUI'
+        },
+        {
+          name: 'Mint UI (https://github.com/ElemeFE/mint-ui)',
+          value: 'mint-ui',
+          short: 'MintUI'
+        },
+        {
+          name: 'none',
+          value: 'none',
+          short: 'none'
+        }
+      ]
     },
     eslint: {
       type: 'confirm',
@@ -55,24 +71,20 @@ module.exports = {
         }
       ]
     },
+    vcc: {
+      type: 'confirm',
+      message: 'Trying to use vue-class-component?'
+    },
     unit: {
       type: 'confirm',
-      require: true,
-      message: 'Setup unit tests with Karma + Mocha?',
-      default: true
-    },
-    shell: {
-      type: 'confirm',
-      require: true,
-      message: 'Need publish script?',
-      default: true
+      message: 'Setup unit tests with Karma + Mocha?'
     }
   },
   filters: {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
-    'test/**/*': 'unit',
-    'publish.sh': 'shell'
+    'test/unit/**/*': 'unit',
+    'configs/webpack.test.js': 'unit'
   },
-  completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev'
+  completeMessage: 'To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm start'
 }

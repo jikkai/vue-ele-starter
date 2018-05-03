@@ -9,14 +9,8 @@ $ npm install
 To develop:
 
 ```bash
-$ npm run dev
+$ npm start
 ```
-
-{{#unit}}To test:
-
-```bash
-$ npm run unit
-```{{/unit}}
 
 To build for production:
 

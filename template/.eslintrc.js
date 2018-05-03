@@ -16,14 +16,15 @@ module.exports = {
   plugins: [
     'html'
   ],
+  {{#vcc}}
+  "parser": "babel-eslint",
+  {{/vcc}}
   'rules': {
     {{#if_eq eslintConfig 'standard'}}
-    // allow paren-less arrow functions
     'arrow-parens': 0,
-    // allow async-await
     'generator-star-spacing': 0,
     {{/if_eq}}
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-console': 1
   }
 }

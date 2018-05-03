@@ -1,7 +1,6 @@
 node_modules/
+dist{{#unit}}
+test/unit/coverage{{/unit}}
+
 *.log
 .DS_Store
-dist
-{{#unit}}
-test/coverage
-{{/unit}}

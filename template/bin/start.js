@@ -1,15 +1,14 @@
-'use strict'
 const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
 
-const webpackConfig = require('./webpack.dev')
-const config = require('./config')
+const webpackConfig = require('../configs/webpack.dev')
+const config = require('../configs/config')
 
 const app = express()
 
 webpackConfig.entry.client = [
-  'webpack-hot-middleware/client',
+  'webpack-hot-middleware/client?reload=true',
   webpackConfig.entry.client
 ]
 

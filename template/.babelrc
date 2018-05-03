@@ -1,11 +1,29 @@
 {
-  "plugins": [["component", [
-    {{#if_eq theme 'element-ui'}}
-    { "libraryName": "element-ui", "styleLibraryName": "theme-default" }
-    {{else}}
-    { "libraryName": "mint-ui", "style": true }
-    {{/if_eq}}
-  ]]],
-  "presets": ["es2015", "stage-0"]
-
+  "plugins": [{{#unless_eq theme 'none'}}
+    ["component", [
+      {{#if_eq theme 'element-ui'}}
+      { "libraryName": "element-ui", "styleLibraryName": "theme-chalk" }
+      {{/if_eq}}
+      {{#if_eq theme 'mint-ui'}}
+      { "libraryName": "mint-ui", "style": true }
+      {{/if_eq}}
+    ]],{{/unless_eq}}
+    {{#vcc}}
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    {{/vcc}}
+    "syntax-dynamic-import",
+    "transform-object-rest-spread"
+  ],
+  "presets": [
+    [ "env", {
+      "targets": {
+        "browsers": [
+          "> 1%",
+          "last 2 versions",
+          "not ie <= 8"
+        ]
+      }
+    }]
+  ]
 }
