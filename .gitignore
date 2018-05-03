@@ -1,5 +1,6 @@
 node_modules
 temp
 
+Thumbs.db
 .DS_Store
 *.log

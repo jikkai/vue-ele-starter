@@ -16,13 +16,13 @@
 ## Get Started
 
 ```bash
-$ vue init jikkai/vue-ele-starter vue-project
-$ cd vue-project
-$ npm i
+vue init jikkai/vue-ele-starter vue-project
+cd vue-project
+npm i
 
-$ npm start
+npm start
 
-$ npm run build
+npm run build
 ```
 
 ## License

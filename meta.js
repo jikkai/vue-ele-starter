@@ -24,7 +24,7 @@ module.exports = {
       type: 'list',
       required: true,
       message: 'Select router mode',
-      choices: ['history', 'hash']
+      choices: ['hash', 'history']
     },
     theme: {
       type: 'list',
