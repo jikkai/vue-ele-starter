@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 const config = require('./config')
 
@@ -47,6 +48,7 @@ module.exports = {
       template: path.resolve(__dirname, './index.html'),
       favicon: path.resolve(__dirname, '../public/favicon.png'),
       filename: './index.html'
-    })
+    }),
+    new VueLoaderPlugin()
   ]
 }
