@@ -22,21 +22,21 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0-beta.49",
     {{#vcc}}
     "babel-eslint": "^8.2.3",
     {{/vcc}}
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.0-beta.3",
     {{#unless_eq theme 'none'}}
     "babel-plugin-component": "latest",
     {{/unless_eq}}
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
     {{#vcc}}
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.49",
     {{/vcc}}
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
     "chalk": "^2.4.1",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
@@ -45,16 +45,15 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.3",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     {{#if_eq eslintConfig 'standard'}}
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     {{/if_eq}}
     {{/eslint}}
     "express": "^4.16.3",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     {{#unit}}
@@ -68,8 +67,9 @@
     "karma-webpack": "^3.0.0",
     "mocha": "^5.1.1",
     {{/unit}}
-    "nodemon": "^1.17.3",
-    "postcss-loader": "^2.1.4",
+    "mini-css-extract-plugin": "^0.4.0",
+    "nodemon": "^1.17.5",
+    "postcss-loader": "^2.1.5",
     "postcss-salad": "^2.0.1",
     "progress-bar-webpack-plugin": "^1.11.0",
     "rimraf": "^2.6.2",
@@ -79,8 +79,8 @@
     {{/vcc}}
     "vue-loader": "latest",
     "vue-template-compiler": "latest",
-    "webpack": "^4.6.0",
+    "webpack": "^4.10.1",
     "webpack-dev-middleware": "^3.1.3",
-    "webpack-hot-middleware": "^2.22.1"
+    "webpack-hot-middleware": "^2.22.2"
   }
 }
