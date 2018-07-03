@@ -1,13 +1,13 @@
 {
   "plugins": [{{#unless_eq theme 'none'}}
-    ["component", {
+    ["component",
       {{#if_eq theme 'element-ui'}}
       { "libraryName": "element-ui", "styleLibraryName": "theme-chalk" }
       {{/if_eq}}
       {{#if_eq theme 'mint-ui'}}
       { "libraryName": "mint-ui", "style": true }
       {{/if_eq}}
-    }],{{/unless_eq}}
+    ],{{/unless_eq}}
     {{#vcc}}
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     "@babel/plugin-proposal-class-properties",
